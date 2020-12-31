@@ -1,0 +1,36 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:AuthControl.Controls">
+
+    <Style TargetType="controls:AuthControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:AuthControl">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Username" />
+                            <TextBox x:Name="UsernameBox"
+                                     PlaceholderText="John Doe"
+                                     Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=UsernameInput, Mode=TwoWay}"
+                                     Margin="0 20 0 0" />
+                            
+                            <TextBlock Text="Password"
+                                       Margin="0 20 0 0" />
+                            <PasswordBox x:Name="PasswordBox"
+                                         Margin="0 20 0 0" />
+                            
+                            <Button x:Name="LoginButton"
+                                    Content="Login"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    IsEnabled="{TemplateBinding IsLoginButtonEnabled}"
+                                    Margin="0 20 0 0" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
