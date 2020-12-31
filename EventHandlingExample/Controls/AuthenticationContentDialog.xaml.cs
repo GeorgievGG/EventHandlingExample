@@ -6,13 +6,9 @@ namespace EventHandlingExample.Controls
 {
     public sealed partial class AuthenticationContentDialog : ContentDialog
     {
-        // TODO: Custom event here
-
         public AuthenticationContentDialog()
         {
             this.InitializeComponent();
         }
-
-        // TODO: Event Handler
     }
 }

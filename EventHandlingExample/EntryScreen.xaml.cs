@@ -21,7 +21,5 @@ namespace EventHandlingExample
         {
             await AuthContentDialog.ShowAsync();
         }
-
-        // TODO: EventHandler
     }
 }

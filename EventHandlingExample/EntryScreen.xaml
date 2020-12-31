@@ -15,7 +15,6 @@
     </Page.Resources>
     
     <Grid>
-        <!--TODO: Bind Event-->
         <controls:AuthenticationContentDialog x:Name="AuthContentDialog" />
 
         <TextBlock Text="{x:Bind ViewModel.UserLoggedInfo, Mode=OneWay}"
