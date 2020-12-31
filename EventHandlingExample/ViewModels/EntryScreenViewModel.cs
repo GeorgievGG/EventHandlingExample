@@ -6,13 +6,13 @@ namespace EventHandlingExample.ViewModels
 {
     public class EntryScreenViewModel : BaseViewModel
     {
-        private EventAggregator _eventAggregator = Singleton<EventAggregator>.Instance;
+        // TODO: EventAggregator
         private string _userLoggedInfo;
         private bool _isUserLogged;
 
         public EntryScreenViewModel()
         {
-            _eventAggregator.GetEvent<UserLoggedEvent>().Subscribe(OnUserLogged);
+            // TODO: Subscribe
             UserLoggedInfo = AuthService.GetUserLoggedInfo();
         }
 
@@ -43,9 +43,6 @@ namespace EventHandlingExample.ViewModels
             UserLoggedInfo = AuthService.GetUserLoggedInfo();
         }
 
-        public void OnUserLogged(LoginInfo args)
-        {
-            Login(args.UserName, args.Password);
-        }
+        // TODO: EventHandler
     }
 }

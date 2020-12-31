@@ -6,16 +6,13 @@ namespace EventHandlingExample.Controls
 {
     public sealed partial class AuthenticationContentDialog : ContentDialog
     {
-        private EventAggregator _eventAggregator = Singleton<EventAggregator>.Instance;
+        // TODO: EventAggregator
 
         public AuthenticationContentDialog()
         {
             this.InitializeComponent();
         }
 
-        private void OnUserLogged(object sender, LoginInfo args)
-        {
-            _eventAggregator.GetEvent<UserLoggedEvent>().Publish(args);
-        }
+        // TODO: EventHandler
     }
 }
