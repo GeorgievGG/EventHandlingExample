@@ -119,11 +119,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\BackgroundEventSubscription.cs" />
+    <Compile Include="Common\DataEventArgs.cs" />
+    <Compile Include="Common\DelegateReference.cs" />
+    <Compile Include="Common\DispatcherEventSubscription.cs" />
     <Compile Include="Common\EventAggregator.cs" />
     <Compile Include="Common\EventBase.cs" />
+    <Compile Include="Common\EventSubscription.cs" />
+    <Compile Include="Common\IDelegateReference.cs" />
     <Compile Include="Common\IEventAggregator.cs" />
     <Compile Include="Common\IEventSubscription.cs" />
+    <Compile Include="Common\PubSubEvent.cs" />
+    <Compile Include="Common\Singleton.cs" />
     <Compile Include="Common\SubscriptionToken.cs" />
+    <Compile Include="Common\ThreadOption.cs" />
+    <Compile Include="Common\UserLoggedEvent.cs" />
     <Compile Include="Controls\AuthenticationContentDialog.xaml.cs">
       <DependentUpon>AuthenticationContentDialog.xaml</DependentUpon>
     </Compile>

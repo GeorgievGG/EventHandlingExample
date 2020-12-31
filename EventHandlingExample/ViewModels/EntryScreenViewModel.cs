@@ -1,11 +1,20 @@
-﻿using EventHandlingExample.Services;
+﻿using AuthControl.Models;
+using EventHandlingExample.Common;
+using EventHandlingExample.Services;
 
 namespace EventHandlingExample.ViewModels
 {
     public class EntryScreenViewModel : BaseViewModel
     {
+        private EventAggregator _eventAggregator = Singleton<EventAggregator>.Instance;
         private string _userLoggedInfo;
         private bool _isUserLogged;
+
+        public EntryScreenViewModel()
+        {
+            _eventAggregator.GetEvent<UserLoggedEvent>().Subscribe(OnUserLogged);
+            UserLoggedInfo = AuthService.GetUserLoggedInfo();
+        }
 
         public string UserLoggedInfo
         {
@@ -32,6 +41,11 @@ namespace EventHandlingExample.ViewModels
             AuthService.Login(username, password);
             IsUserLogged = AuthService.IsLogged;
             UserLoggedInfo = AuthService.GetUserLoggedInfo();
+        }
+
+        public void OnUserLogged(LoginInfo args)
+        {
+            Login(args.UserName, args.Password);
         }
     }
 }
