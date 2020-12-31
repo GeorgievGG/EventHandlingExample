@@ -7,6 +7,11 @@ namespace EventHandlingExample.ViewModels
         private string _userLoggedInfo;
         private bool _isUserLogged;
 
+        public EntryScreenViewModel()
+        {
+            UserLoggedInfo = AuthService.GetUserLoggedInfo();
+        }
+
         public string UserLoggedInfo
         {
             get => _userLoggedInfo;
