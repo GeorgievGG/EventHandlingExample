@@ -22,9 +22,6 @@ namespace EventHandlingExample
             await AuthContentDialog.ShowAsync();
         }
 
-        private void OnUserLogged(object sender, LoginInfo args)
-        {
-            ViewModel.Login(args.UserName, args.Password);
-        }
+        // TODO: EventHandler
     }
 }
