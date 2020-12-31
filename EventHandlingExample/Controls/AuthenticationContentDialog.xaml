@@ -8,6 +8,7 @@
              d:DesignHeight="300"
              d:DesignWidth="400">
     <Grid>
-        <authControl:AuthControl UserLogged="OnUserLogged" />
+        <!--TODO: Bind to event-->
+        <authControl:AuthControl />
     </Grid>
 </ContentDialog>
