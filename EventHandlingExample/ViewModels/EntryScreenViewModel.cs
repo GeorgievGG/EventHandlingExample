@@ -9,12 +9,12 @@ namespace EventHandlingExample.ViewModels
     {
         private string _userLoggedInfo;
         private bool _isUserLogged;
-        private ICommand _userLoggedCommand;
+        // TODO: Command field
 
         public EntryScreenViewModel()
         {
             UserLoggedInfo = AuthService.GetUserLoggedInfo();
-            UserLoggedCommand = new RelayCommand<LoginInfo>((x) => Login(x.UserName, x.Password));
+            // TODO: Assign command
         }
 
         public string UserLoggedInfo
@@ -37,15 +37,7 @@ namespace EventHandlingExample.ViewModels
             }
         }
 
-        public ICommand UserLoggedCommand
-        {
-            get { return _userLoggedCommand; }
-            set
-            {
-                _userLoggedCommand = value;
-                OnPropertyChanged(nameof(UserLoggedCommand));
-            }
-        }
+        // TODO: Command property
 
         public void Login(string username, string password)
         {

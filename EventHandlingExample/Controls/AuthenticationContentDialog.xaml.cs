@@ -14,13 +14,6 @@ namespace EventHandlingExample.Controls
             this.InitializeComponent();
         }
 
-        public static readonly DependencyProperty UserLoggedCommandProperty = DependencyProperty.Register(
-            nameof(UserLoggedCommand), typeof(ICommand), typeof(AuthenticationContentDialog), new PropertyMetadata(default(ICommand)));
-
-        public ICommand UserLoggedCommand
-        {
-            get => (ICommand)GetValue(UserLoggedCommandProperty);
-            set => SetValue(UserLoggedCommandProperty, value);
-        }
+        // TODO: Add Command
     }
 }

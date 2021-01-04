@@ -10,14 +10,7 @@
                d:DesignHeight="300"
                d:DesignWidth="400">
     <Grid>
-        <authControl:AuthControl>
-            <i:Interaction.Behaviors>
-                <core:EventTriggerBehavior EventName="UserLogged">
-                    <core:EventTriggerBehavior.Actions>
-                        <core:InvokeCommandAction Command="{x:Bind UserLoggedCommand, Mode=OneWay}"/>
-                    </core:EventTriggerBehavior.Actions>
-                </core:EventTriggerBehavior>
-            </i:Interaction.Behaviors>
-        </authControl:AuthControl>
+        <!--TODO: Add Behavior-->
+        <authControl:AuthControl />
     </Grid>
 </ContentDialog>
