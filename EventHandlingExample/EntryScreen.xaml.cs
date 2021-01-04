@@ -1,5 +1,4 @@
-﻿using AuthControl.Models;
-using EventHandlingExample.ViewModels;
+﻿using EventHandlingExample.ViewModels;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;

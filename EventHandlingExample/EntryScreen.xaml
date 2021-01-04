@@ -15,7 +15,8 @@
     </Page.Resources>
     
     <Grid>
-        <controls:AuthenticationContentDialog x:Name="AuthContentDialog" />
+        <controls:AuthenticationContentDialog x:Name="AuthContentDialog"
+                                              UserLoggedCommand="{x:Bind ViewModel.UserLoggedCommand, Mode=OneWay}" />
 
         <TextBlock Text="{x:Bind ViewModel.UserLoggedInfo, Mode=OneWay}"
                    HorizontalAlignment="Center"

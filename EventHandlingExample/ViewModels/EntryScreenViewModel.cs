@@ -1,4 +1,7 @@
-﻿using EventHandlingExample.Services;
+﻿using AuthControl.Models;
+using EventHandlingExample.Common;
+using EventHandlingExample.Services;
+using System.Windows.Input;
 
 namespace EventHandlingExample.ViewModels
 {
@@ -6,10 +9,12 @@ namespace EventHandlingExample.ViewModels
     {
         private string _userLoggedInfo;
         private bool _isUserLogged;
+        private ICommand _userLoggedCommand;
 
         public EntryScreenViewModel()
         {
             UserLoggedInfo = AuthService.GetUserLoggedInfo();
+            UserLoggedCommand = new RelayCommand<LoginInfo>((x) => Login(x.UserName, x.Password));
         }
 
         public string UserLoggedInfo
@@ -29,6 +34,16 @@ namespace EventHandlingExample.ViewModels
             {
                 _isUserLogged = value;
                 OnPropertyChanged(nameof(IsUserLogged));
+            }
+        }
+
+        public ICommand UserLoggedCommand
+        {
+            get { return _userLoggedCommand; }
+            set
+            {
+                _userLoggedCommand = value;
+                OnPropertyChanged(nameof(UserLoggedCommand));
             }
         }
 
