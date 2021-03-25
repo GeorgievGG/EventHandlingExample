@@ -52,7 +52,6 @@ namespace EventHandlingExample
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
-                    //TODO: Load state from previously suspended application
                 }
 
                 // Place the frame in the current Window
