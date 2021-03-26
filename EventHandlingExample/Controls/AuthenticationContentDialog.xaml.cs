@@ -1,5 +1,6 @@
 ﻿using AuthControl.Models;
 using EventHandlingExample.Common;
+using EventHandlingExample.PubSubEvents;
 using Windows.UI.Xaml.Controls;
 
 namespace EventHandlingExample.Controls
