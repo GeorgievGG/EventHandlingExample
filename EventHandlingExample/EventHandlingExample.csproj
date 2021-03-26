@@ -134,7 +134,7 @@
     <Compile Include="Common\Singleton.cs" />
     <Compile Include="Common\SubscriptionToken.cs" />
     <Compile Include="Common\ThreadOption.cs" />
-    <Compile Include="Common\UserLoggedEvent.cs" />
+    <Compile Include="PubSubEvents\UserLoggedEvent.cs" />
     <Compile Include="Controls\AuthenticationContentDialog.xaml.cs">
       <DependentUpon>AuthenticationContentDialog.xaml</DependentUpon>
     </Compile>
